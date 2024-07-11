@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHERVUE</title>
+    <link rel="shortcut icon" type="x-icon" href="sun.png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class='bx bx-current-location'></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="bx bx-search"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="error.jpg">
+            <p>Your location is invalid</p>
+        </div>
+
+        <div class="weather-box">
+            <img src=" ">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>          
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>          
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
