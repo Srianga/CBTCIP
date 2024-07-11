@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: url(mywall3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.apps {
+    font-family: "Poppins", sans-serif;
+    margin: 137px auto;
+    padding: 2em 2.5em;
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, .3);
+}
+
+.container h2 {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+#wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 11fr 4fr;
+    gap: 1rem;
+}
+
+#wrapper input {
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.3em;
+    color: #fff;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+#wrapper input::placeholder {
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .0001);
+    font-size: 15px;
+    font-weight: 50;
+}
+
+#wrapper button {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    border-radius: 0.5em;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.4s ease;
+}
+
+#wrapper button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+#task {
+    position: relative;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 1em 0.5em;
+}
+
+.task {
+    background-color: rgb(153, 152, 152);
+    color: black;
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap: 1em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task:not(:first-child) {
+    margin-top: 1em;
+}
+
+.task input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.task input[type="checkbox"]:before{
+    position: absolute;
+    content: "";
+    transform: translate(-50%, -50%);
+    top: 50;
+    left: 50;
+}
+
+.task input[type="checkbox"]:checked{
+    background-color: rgb(33, 255, 4);
+    border-color: rgb(33, 255, 4);
+}
+
+.task input[type="checkbox"]:checked:before{
+    position:absolute;
+    content: "\2713";
+    color: #fff;
+    font-size: 1.2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:"Font Auwsome 5 Free";
+
+}
+
+.task span{
+   font: 0.9em;
+   font-weight: 400;
+   word-break: break-all;
+}
+
+.task button {
+    color: #fff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.edit i {
+    font-size: 20px;
+}
+
+.edit:hover {
+    background-color: rgb(126, 3, 126);
+}
+
+.delete {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.delete i {
+    font-size: 20px;
+}
+
+.delete:hover {
+    background-color: rgb(199, 9, 9);
+}
+
+.completed {
+    background-color: rgb(82, 247, 82);
+    color: #fff;
+
+}
+
+.error {
+    color: red;
+    margin-top: 1.5em;
+    padding: 1em 0;
+    display: none;
+}
