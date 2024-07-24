@@ -77,9 +77,17 @@ const addTask = () => {
             displayCount();
         };
     });
+
 };
 
 addBtn.addEventListener("click", addTask);
+
+newTaskInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
+
 
 window.onload = () => {
     taskCount = 0;
