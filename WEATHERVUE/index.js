@@ -37,30 +37,48 @@ const performSearch = () => {
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
 
-            switch (json.weather[0].main) {
-                case 'Clear':
+            console.log(json.weather[0].description);  // Log the weather description
+
+            switch (json.weather[0].description.toLowerCase()) {
+                case 'clear sky':
                     image.src = 'sun.png';
                     break;
-                case 'Rain':
+                case 'light rain':
+                case 'moderate rain':
+                case 'heavy intensity rain':
+                case 'very heavy rain':
+                case 'extreme rain':
                     image.src = 'raincloud.png';
                     break;
-                case 'Thundershower':
-                    image.src = 'thundercloud.png';
+                case 'thunderstorm with light rain':
+                case 'thunderstorm with rain':
+                case 'thunderstorm with heavy rain':
+                    image.src = 'thunderstormwithlightrain.png';
                     break;
-                case 'Snow':
-                    image.src = 'smallsun.png';
+                case 'snow':
+                case 'light snow':
+                case 'heavy snow':
+                    image.src = 'snow.png';
                     break;
-                case 'Clouds':
+                case 'few clouds':
+                case 'scattered clouds':
+                case 'broken clouds':
+                case 'overcast clouds':
                     image.src = 'cloudysun.png';
                     break;
-                case 'Mist':
+                case 'mist':
+                case 'smoke':
+                case 'sand dust whirls':
+                case 'fog':
+                case 'sand':
+                case 'dust':
+                case 'volcanic ash':
+                case 'squalls':
+                case 'tornado':
                     image.src = 'mist.png';
                     break;
-                case 'Haze':
+                case 'haze':
                     image.src = 'haze.png';
-                    break;
-                case 'Snow':
-                    image.src = 'snow.png';
                     break;
                 default:
                     image.src = '';
@@ -86,3 +104,12 @@ searchInput.addEventListener('keydown', (event) => {
         performSearch();
     }
 });
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+    this.setTimeout(function(){
+        loader.style.display = "none";
+    },2500)
+});
+
